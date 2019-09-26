@@ -19,6 +19,12 @@ const rules = [
         message: 'Use the serial, series or oxford comma.',
         test: /(\w+, +){1,}\w+ and/,
     },
+    {
+      name: 'no-profanity',
+      level: 'error',
+      message: 'Do not use profanity (e.g., fuck)',
+      test: /(fuck|shit|crap|bitch)/,
+    },
 ];
 
 const app = new App({
