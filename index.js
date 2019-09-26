@@ -14,10 +14,10 @@ const rules = [
         test: /[^\.\?\!]$/,
     },
     {
-        name: 'series-comma',
-        level: 'error',
-        message: 'Use the serial, series or oxford comma.',
-        test: /(\w+, +){1,}\w+ and/,
+        name: 'series-comma',
+        level: 'error',
+        message: 'Use the serial, series or oxford comma.',
+        test: /(\w+, +){1,}\w+ and/g,
     },
     {
 <<<<<<< HEAD
