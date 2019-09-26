@@ -1,0 +1,26 @@
+{
+  "name": "slack-lint",
+  "version": "1.0.0",
+  "description": "Slack message linting bot",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@slack/bolt": "^1.2.0"
+  },
+  "engines": {
+    "node": "10.x"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aj-may/slack-lint.git"
+  },
+  "author": "A.J. May (https://github.com/aj-may)",
+  "bugs": {
+    "url": "https://github.com/aj-may/slack-lint/issues"
+  },
+  "homepage": "https://github.com/aj-may/slack-lint#readme"
+}
