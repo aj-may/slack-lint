@@ -4,7 +4,7 @@ const rules = [
     {
         name: 'capital-first',
         level: 'error',
-        message: 'First letter of message must be a capital letter.',
+        message: 'first letter of message must be a capital letter.',
         test: /^[^A-Z]/,
     },
     {
