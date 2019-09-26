@@ -20,10 +20,17 @@ const rules = [
         test: /(\w+, +){1,}\w+ and/,
     },
     {
+<<<<<<< HEAD
       name: 'no-profanity',
       level: 'error',
       message: 'Do not use profanity (e.g., fuck)',
       test: /(fuck|shit|crap|bitch)/,
+=======
+      name: 'passive-voice',
+      level: 'error',
+      message: 'It has been deemed inappropriate to use passive voice.',
+      test: /\b((be(en)?)|(w(as|ere))|(is)|(a(er|m)))(.+(en|ed))([\s]|\.)/,
+>>>>>>> feat: add passive voice linter
     },
 ];
 
