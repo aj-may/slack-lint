@@ -37,6 +37,12 @@ const rules = [
     message: 'It\'s unacceptable to use contractions.',
     test: /\w+(n't|'ll|'s|'d|'m|'ve|'re)/g,
   },
+  {
+    name: 'sentence-spacing',
+    level: 'error',
+    message: 'Too many spaces between sentences.  Only use one.',
+    test: /\.  ./g,
+  },
 ];
 
 const app = new App({
