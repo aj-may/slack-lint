@@ -22,7 +22,7 @@ const rules = [
   {
     name: 'no-profanity',
     level: 'error',
-    message: 'Do not use profanity (e.g., fuck)',
+    message: 'No profanity, damnit!',
     test: /(fuck|shit|crap|bitch)/g,
   },
   {
