@@ -13,6 +13,12 @@ const rules = [
         message: 'Message must end with appropriate punctuation (.?!)',
         test: /[^\.\?\!]$/,
     },
+    {
+        name: 'series-comma',
+        level: 'error',
+        message: 'Use the serial, series or oxford comma.',
+        test: /(\w+, +){1,}\w+ and/,
+    },
 ];
 
 const app = new App({
