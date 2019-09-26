@@ -25,6 +25,12 @@ const rules = [
       message: 'Do not use profanity (e.g., fuck)',
       test: /(fuck|shit|crap|bitch)/,
     },
+    {
+      name: 'no-contractions',
+      level: 'error',
+      message: 'It\'s unacceptable to use contractions.',
+      test: /\w+(n't|'ll|'s|'d|'m|'ve|'re)/,
+    },
 ];
 
 const app = new App({
