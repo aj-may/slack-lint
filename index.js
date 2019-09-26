@@ -1,43 +1,42 @@
 const { App } = require('@slack/bolt');
 
 const rules = [
-    {
-        name: 'capital-first',
-        level: 'error',
-        message: 'first letter of message must be a capital letter.',
-        test: /^[^A-Z]/,
-    },
-    {
-        name: 'use-punctuation',
-        level: 'error',
-        message: 'Message must end with appropriate punctuation (.?!)',
-        test: /[^\.\?\!]$/,
-    },
-    {
-        name: 'series-comma',
-        level: 'error',
-        message: 'Use the serial, series or oxford comma.',
-        test: /(\w+, +){1,}\w+ and/,
-    },
-    {
-<<<<<<< HEAD
-      name: 'no-profanity',
-      level: 'error',
-      message: 'Do not use profanity (e.g., fuck)',
-      test: /(fuck|shit|crap|bitch)/,
-=======
-      name: 'passive-voice',
-      level: 'error',
-      message: 'It has been deemed inappropriate to use passive voice.',
-      test: /\b((be(en)?)|(w(as|ere))|(is)|(a(er|m)))(.+(en|ed))([\s]|\.)/,
->>>>>>> feat: add passive voice linter
-    },
-    {
-      name: 'no-contractions',
-      level: 'error',
-      message: 'It\'s unacceptable to use contractions.',
-      test: /\w+(n't|'ll|'s|'d|'m|'ve|'re)/,
-    },
+  {
+    name: 'capital-first',
+    level: 'error',
+    message: 'first letter of message must be a capital letter.',
+    test: /^[^A-Z]/,
+  },
+  {
+    name: 'use-punctuation',
+    level: 'error',
+    message: 'Message must end with appropriate punctuation (.?!)',
+    test: /[^\.\?\!]$/,
+  },
+  {
+    name: 'series-comma',
+    level: 'error',
+    message: 'Use the serial, series or oxford comma.',
+    test: /(\w+, +){1,}\w+ and/g,
+  },
+  {
+    name: 'no-profanity',
+    level: 'error',
+    message: 'Do not use profanity (e.g., fuck)',
+    test: /(fuck|shit|crap|bitch)/g,
+  },
+  {
+    name: 'passive-voice',
+    level: 'error',
+    message: 'It has been deemed inappropriate to use passive voice.',
+    test: /\b((be(en)?)|(w(as|ere))|(is)|(a(er|m)))(.+(en|ed))([\s]|\.)/g,
+  },
+  {
+    name: 'no-contractions',
+    level: 'error',
+    message: 'It\'s unacceptable to use contractions.',
+    test: /\w+(n't|'ll|'s|'d|'m|'ve|'re)/g,
+  },
 ];
 
 const app = new App({
