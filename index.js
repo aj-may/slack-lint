@@ -32,6 +32,12 @@ const rules = [
       test: /\b((be(en)?)|(w(as|ere))|(is)|(a(er|m)))(.+(en|ed))([\s]|\.)/,
 >>>>>>> feat: add passive voice linter
     },
+    {
+      name: 'no-contractions',
+      level: 'error',
+      message: 'It\'s unacceptable to use contractions.',
+      test: /\w+(n't|'ll|'s|'d|'m|'ve|'re)/,
+    },
 ];
 
 const app = new App({
