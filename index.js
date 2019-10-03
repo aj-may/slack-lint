@@ -62,7 +62,8 @@ const execAll = (re, str) => {
   return arr;
 }
 
-app.message(({ message: { user, text }, say }) => {
+app.message(({ message: { user, text, channel_type }, say }) => {
+  if (!( user === 'DDGCVT49K' || channel_type === 'im' ))  return;
   const lineBreaks = execAll(/\n/g, text).map(m => m.index);
   const errors = rules.reduce((acc, rule) => {
     const matches = execAll(rule.test, text);
